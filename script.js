@@ -22,8 +22,10 @@ class Contact{
 }
 
 // Print Function
-const print = (information) => {
-    console.log(information);
+const print = (aReferanceToAnAddressBook) => {
+    aReferanceToAnAddressBook.contacts.forEach(contact => {
+        console.log(contact);
+    });
 }
 
 // Creating Address Book and Contacts
