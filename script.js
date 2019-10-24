@@ -31,6 +31,7 @@ const print = (aReferanceToAnAddressBook) => {
 // Creating Address Book and Contacts
 const addressBook = new AddressBook();
 
+// Adding Contacts to Address Boook
 addressBook.add("Warren", "warren@gmail.com", 7343218798, "Father");
 addressBook.add("Nancy", "nancy@gmail.com", 1234567890, "Mother");
 addressBook.add("Gillian", "gillian@gmail.com", 9878463748, "Sister");
@@ -38,6 +39,7 @@ addressBook.add("Casey", "casey@gmail.com", 4563782956, "Brother");
 addressBook.add("Liam", "liam@gmail.com", 7345674653, "Myself");
 addressBook.deleteAt(4);
 
+// Printing Address Book
 print(addressBook);
 
 
