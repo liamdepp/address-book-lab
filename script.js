@@ -3,8 +3,8 @@ class AddressBook {
     constructor() {
         this.contacts = [];
     };
-    add(info) {
-        this.contacts.push(info);
+    add(name, email, phone, relation) {
+        this.contacts.push(new Contact(name, email, phone, relation));
     }
     deleteAt(index) {
         this.contacts.splice(index, 1);
@@ -29,15 +29,10 @@ const print = (information) => {
 // Creating Address Book and Contacts
 const addressBook = new AddressBook();
 
-let contact1 = new Contact("Warren", "warren@gmail.com", 7343218798, "Father");
-let contact2 = new Contact("Nancy", "nancy@gmail.com", 1234567890, "Mother");
-let contact3 = new Contact("Gillian", "gillian@gmail.com", 9878463748, "Sister");
-let contact4 = new Contact("Casey", "casey@gmail.com", 4563782956, "Brother");
-
-addressBook.add(contact1);
-addressBook.add(contact2);
-addressBook.add(contact3);
-addressBook.add(contact4);
+addressBook.add("Warren", "warren@gmail.com", 7343218798, "Father");
+addressBook.add("Nancy", "nancy@gmail.com", 1234567890, "Mother");
+addressBook.add("Gillian", "gillian@gmail.com", 9878463748, "Sister");
+addressBook.add("Casey", "casey@gmail.com", 4563782956, "Brother");
 
 print(addressBook);
 
