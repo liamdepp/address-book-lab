@@ -9,6 +9,17 @@ class AddressBook {
     deleteAt(index) {
         this.contacts.splice(index, 1);
     }
+    filterByName(name) {
+        let filterByName = this.contacts.filter(contact => contact.name === name);
+        return filterByName;
+    }
+    filterByRelation(relation){
+        let filterByRelation = this.contacts.filter(contact => contact.relation === relation);
+        return filterByRelation;
+    }
+    clear() {
+        this.contacts = [];
+    }
 }
 
 // Contacts Class
@@ -26,6 +37,7 @@ const print = (aReferanceToAnAddressBook) => {
     aReferanceToAnAddressBook.contacts.forEach(contact => {
         console.log(contact);
     });
+    
 }
 
 // Creating Address Book and Contacts
@@ -43,4 +55,10 @@ addressBook.deleteAt(4);
 print(addressBook);
 
 
+// const filterByName = addressBook.contacts.filter(contact => contact.name === "Nancy");
+// console.log(filterByName);
+
+console.log(addressBook.filterByName("Nancy"));
+console.log(addressBook.filterByRelation("Father"));
+console.log(addressBook.filterByRelation("Sister"));
 
