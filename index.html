@@ -6,10 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Address Book</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Address Book</h1>
+    <div class="main">
+        <form action="" class="form-box">
+            <h1>My Contacts</h1>
+            <label for="name">Name</label>
+            <input type="text" name="name">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="">
+            <label for="phone">Phone Number</label>
+            <input type="number" name="phone" id="">
+            <label for="relation" class="relation-label">Relation</label>
+            <select name="relation" class="select">
+                <option value="">---Select One---</option>
+                <option value="Family">Family</option>
+                <option value="Friends">Friends</option>
+                <option value="Myself">Myself</option>
+                <option value="Other">Other</option>
+            </select>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+    <div id="contactBox"></div>
+
+
+
+
+
+
+
+
+
     <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/488a0a2b97.js" crossorigin="anonymous"></script>
 </body>
 </html>
